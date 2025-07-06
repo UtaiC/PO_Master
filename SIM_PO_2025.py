@@ -123,5 +123,5 @@ st.write(f"Showing ETA for {Month_Selected} {year}:")
 filtered_df = filtered_df.reset_index(drop=True) 
 filtered_df.index += 1 
 filtered_df['Customer-ETA-Date']=filtered_df['Customer-ETA-Date'] = pd.to_datetime(filtered_df['Customer-ETA-Date']).dt.date
-filtered_df=filtered_df[['PO ID','Customer','Part-Name','Product','PO-Qty','Customer-ETA-Date','Logistic Status']]
+filtered_df=filtered_df[['PO ID','Customer','Part-Name','Product','PO-Qty','Customer-ETA-Date','Logistic Status','ETD-Date']]
 st.dataframe(filtered_df)
